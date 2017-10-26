@@ -1,15 +1,15 @@
 spring:
   profiles:
-    active: DBDatasource,inMemoryDB
+    active: DBDatasource, inMemoryDB
 server:
   baseUrl: http://localhost:8080/
   imageUrl: student/images/
   imageServerDir : C:/bitbucket/images/
 ---
 spring:
-  profiles: imMemoryDB
+  profiles: inMemoryDB
   datasource:
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=- 1; DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=- 1;DB_CLOSE_ON_EXIT=FALSE
     tomcat:
       driverClassName:  org.h2.Driver
       username : sa
